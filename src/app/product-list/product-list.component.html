@@ -1,0 +1,8 @@
+<button (click)="toggleRateColor()">Toggle Rate ({{rate?'Green':'Red'}})</button>
+
+<ul *ngFor="let item of product">
+    <li [ngStyle]="{'color':rate?'green':'red'}">{{ item.name }} - {{ item.price }}</li>
+</ul>
+
+
+<a [routerLink]="['/todo','kushal']">go to todo</a>

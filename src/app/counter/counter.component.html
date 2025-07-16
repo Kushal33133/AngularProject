@@ -1,0 +1,18 @@
+<div
+  style="
+    width: 300px;
+    height: 300px;
+    background: #a88888;
+    border-radius: 20px;
+    text-align: center;
+    margin: 0 auto;
+  "
+>
+  <h1>Counter</h1>
+    <p>Current Count: {{ count }}</p>
+
+    <button (click)="up()" style="background-color: red;">Increment</button>
+    <button (click)="reset()" style="background-color: rgb(33, 209, 83);">Reset</button>
+    <button (click)="down()" style="background-color: rgb(24, 151, 197);" [disabled]="count===0">Decrement</button>
+
+</div>

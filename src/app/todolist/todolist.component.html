@@ -1,0 +1,42 @@
+<div style="width: 300px; border: 1px solid #ccc; border-radius: 8px; padding: 16px; text-align: center;background-color: blanchedalmond;
+margin: 0 auto;
+">
+  <h2>To-Do List</h2>
+  
+  <input type="text" [(ngModel)]="taskInput" placeholder="Add a new task" style="width: 80%; padding: 8px; border-radius: 4px;" />
+  
+  <button (click)="addTask()" style="margin-top: 10px; padding: 8px 16px; border-radius: 4px;">Add Task</button>
+  <button (click)="reset()" style="margin-top: 10px; padding: 8px 16px; border-radius: 4px;">Reset</button>
+
+  
+  <ul style="list-style-type: none; padding: 0; margin-top: 20px;">
+    <li *ngFor="let item of tasks; let i= index" style="padding: 8px; border-bottom: 1px solid #ccc;">
+      {{ item }}
+      <div style="display: flex; justify-content: space-between; margin-top: 8px;">
+        <button (click)="removeTask(i)" style="float: right; background-color: red; color: white; border: none; padding: 4px 8px; border-radius: 4px;">Remove</button>
+        <button (click)="editTask(i)" style="float: right; background-color: rgba(143, 69, 178, 0.832); color: white; border: none; padding: 4px 8px; border-radius: 4px;">Edit</button>
+        <button (click)="updateTask(i)"[hidden]="disabled" style="float: right; background-color: rgba(38, 193, 143, 0.896); color: white; border: none; padding: 4px 8px; border-radius: 4px;">Update</button>
+        
+      </div>
+   
+   
+    </li>
+  </ul>
+</div>
+
+
+<div style="width: 300px; border: 1px solid #ccc; border-radius: 8px; padding: 16px; text-align: center;background-color: blanchedalmond;
+margin: 0 auto; margin-top: 20px;">
+  @for(user of users; track user.id){
+    <h3>{{user.name}}</h3>
+    <h3>{{user.email}}</h3>
+  }
+</div>
+
+
+
+
+
+<h1>{{name}}</h1>
+
+
